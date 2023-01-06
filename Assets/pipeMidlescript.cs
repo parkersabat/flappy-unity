@@ -17,8 +17,9 @@ public class pipeMidlescript : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collission)
     {
-        logic.addScore();
+        if (collission.gameObject.layer == 3)
+            logic.addScore(1);
     }
 }
